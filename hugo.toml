@@ -1,0 +1,34 @@
+baseURL = "https://go-opentype.github.io/"
+title = "go-opentype"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[params.repos]]
+  name = "opentype"
+  pkg = "github.com/go-opentype/opentype"
+  url = "https://github.com/go-opentype/opentype"
+  status = "ready"
+  blurb = "The engine: a pure-Go, stdlib-only **sfnt** parser and anti-aliased rasteriser. Table directory, `head`/`maxp`/`hhea`/`hmtx`, `cmap` formats 4 and 12, `loca` + `glyf` (simple and composite glyphs, quadratic on-curve synthesis), rasterised via 4×4 supersampling under the non-zero winding rule. Phase 1 targets TrueType `glyf` outlines; **CFF/CFF2, GSUB/GPOS shaping, hinting, vertical metrics and variable-font axes are roadmap**, not yet implemented — `Parse` returns a clear error for `OTTO` fonts today."
+
+[[params.repos]]
+  name = "bidi"
+  pkg = "github.com/go-opentype/bidi"
+  url = "https://github.com/go-opentype/bidi"
+  status = "ready"
+  blurb = "A pure-Go, stdlib-only implementation of the **Unicode Bidirectional Algorithm (UAX #9)** for mixed left-to-right / right-to-left text. `Bidi_Class` and paired-bracket properties are compiled into generated lookup tables — no `golang.org/x/text` dependency. `ResolveLevels`, `Reorder` and a `VisualOrder` convenience wrapper."
+
+[[params.repos]]
+  name = "shape"
+  pkg = "github.com/go-opentype/shape"
+  url = "https://github.com/go-opentype/shape"
+  status = "ready"
+  blurb = "A HarfBuzz-lite complex-text shaper composing the two siblings above: bidi reordering from `bidi` and the font's substitution/positioning tables from `opentype`. **Arabic** cursive joining (isolated/initial/medial/final forms tracked through `ccmp` decomposition) and **Latin/default** (ligatures, mark attachment, kerning) shape to positioned glyphs in visual order. Indic, Thai/Lao, Khmer, Myanmar and the Universal Shaping Engine fall back to the default path today."
+
+[[params.repos]]
+  name = "fonts"
+  pkg = "github.com/go-opentype/fonts"
+  url = "https://github.com/go-opentype/fonts"
+  status = "ready"
+  blurb = "Six legible, permissively-licensed TrueType families — **Atkinson Hyperlegible**, Inter, Lora, JetBrains Mono, and the Go/Go Mono pair — embedded as `[]byte` via `go:embed`, no download step. `fonts.MostLegible()` returns Atkinson Hyperlegible, designed by the Braille Institute to maximise character distinction for low-vision readers."
