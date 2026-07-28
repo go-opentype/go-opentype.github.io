@@ -147,10 +147,12 @@ bounds, mask, maskp, advance, ok := face.GlyphMask('H', penX, baselineY)
     <p class="replaces">
       <strong>What it replaces:</strong> the narrow slice of <code>golang.org/x/image/font</code> +
       <code>font/opentype</code> a glyph-blitting UI needs, and <code>golang.org/x/text/unicode/bidi</code> —
-      both dropped in favour of a smaller, purpose-built, dependency-free stack. The long-term aim is
-      functional parity with the HarfBuzz + FreeType pair on the paths this stack covers; today that's
-      TrueType outline parsing/rasterisation, UAX&nbsp;#9 bidi, and Arabic + Latin/default shaping — CFF/CFF2
-      outlines, full GSUB/GPOS, hinting and variable fonts are tracked as roadmap, not yet shipped.
+      both dropped in favour of a smaller, purpose-built, dependency-free stack — reaching
+      <strong>functional parity with the HarfBuzz&nbsp;+ FreeType pair</strong> for anti-aliased rendering and
+      OpenType shaping: TrueType&nbsp;+ CFF&nbsp;+ CFF2 outlines, all cmap formats, every GSUB/GPOS lookup with
+      GDEF&nbsp;+ lookup flags, variable fonts with metric variation, full TrueType&nbsp;+ CFF hinting, the
+      OpenType MATH table, UAX&nbsp;#9 bidi, and complex-script shaping for Arabic, the Indic scripts, the
+      Universal Shaping Engine (Thai/Khmer/Myanmar/…), Egyptian hieroglyphs, Hangul and vertical text.
     </p>
 
     <p class="principles">Every package in the stack ships with a

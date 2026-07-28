@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
   pkg = "github.com/go-opentype/opentype"
   url = "https://github.com/go-opentype/opentype"
   status = "ready"
-  blurb = "The engine: a pure-Go, stdlib-only **sfnt** parser and anti-aliased rasteriser. Table directory, `head`/`maxp`/`hhea`/`hmtx`, `cmap` formats 4 and 12, `loca` + `glyf` (simple and composite glyphs, quadratic on-curve synthesis), rasterised via 4×4 supersampling under the non-zero winding rule. Phase 1 targets TrueType `glyf` outlines; **CFF/CFF2, GSUB/GPOS shaping, hinting, vertical metrics and variable-font axes are roadmap**, not yet implemented — `Parse` returns a clear error for `OTTO` fonts today."
+  blurb = "The engine: a pure-Go, stdlib-only **sfnt** parser and anti-aliased rasteriser. **TrueType `glyf` + CFF + CFF2** outlines; **all cmap formats** (0/2/4/6/8/10/12/13/14 + variation selectors); **every GSUB and GPOS lookup type** with **GDEF + lookup flags** (mark filtering); **variable fonts** (`fvar`/`avar`/`gvar` + IUP, plus `HVAR`/`VVAR`/`MVAR` metric variation); the full **TrueType instruction hinter** and a **CFF/Type 2 stem grid-fitter** (blue zones, counter control, stem darkening); vertical metrics; and the **OpenType `MATH`** table. Feature parity with FreeType on the outline + hinting paths."
 
 [[params.repos]]
   name = "bidi"
@@ -24,11 +24,11 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
   pkg = "github.com/go-opentype/shape"
   url = "https://github.com/go-opentype/shape"
   status = "ready"
-  blurb = "A HarfBuzz-lite complex-text shaper composing the two siblings above: bidi reordering from `bidi` and the font's substitution/positioning tables from `opentype`. **Arabic** cursive joining (isolated/initial/medial/final forms tracked through `ccmp` decomposition) and **Latin/default** (ligatures, mark attachment, kerning) shape to positioned glyphs in visual order. Indic, Thai/Lao, Khmer, Myanmar and the Universal Shaping Engine fall back to the default path today."
+  blurb = "A HarfBuzz-lite complex-text shaper composing the two siblings above: bidi reordering from `bidi` and the font's substitution/positioning tables from `opentype`. Dedicated shapers for **Arabic** (cursive joining), the **Indic** scripts (Devanagari, Bengali, Tamil, … — two-pass reordering, reph modes, split matras, dotted-circle), the **Universal Shaping Engine** (Thai/Lao, Khmer, Myanmar, Tibetan and ~100 more — sakot, split vowels, feature-driven reorder), **Egyptian hieroglyph** quadrats, **Hangul** jamo composition, **vertical** writing mode, and **Latin/default** (ligatures, marks, kerning) — all to positioned glyphs in visual order. Validated on real Noto fonts."
 
 [[params.repos]]
   name = "fonts"
   pkg = "github.com/go-opentype/fonts"
   url = "https://github.com/go-opentype/fonts"
   status = "ready"
-  blurb = "Six legible, permissively-licensed TrueType families — **Atkinson Hyperlegible**, Inter, Lora, JetBrains Mono, and the Go/Go Mono pair — embedded as `[]byte` via `go:embed`, no download step. `fonts.MostLegible()` returns Atkinson Hyperlegible, designed by the Braille Institute to maximise character distinction for low-vision readers."
+  blurb = "**44 legible, permissively-licensed families** — **Atkinson Hyperlegible**, Inter, Lora, JetBrains Mono, the Go pair, dozens of Noto faces, and non-Latin scripts (**Arabic, Hebrew, Devanagari, Thai, Egyptian Hieroglyphs**, plus **CJK** via Noto Sans SC) — each its own subpackage embedded via `go:embed`, so a binary links only the faces it imports. `fonts.MostLegible()` returns Atkinson Hyperlegible, designed by the Braille Institute to maximise character distinction for low-vision readers."
