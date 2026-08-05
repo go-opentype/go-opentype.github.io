@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
   pkg = "github.com/go-opentype/opentype"
   url = "https://github.com/go-opentype/opentype"
   status = "ready"
-  blurb = "The engine: a pure-Go, stdlib-only **sfnt** parser and anti-aliased rasteriser. **TrueType `glyf` + CFF + CFF2** outlines; **all cmap formats** (0/2/4/6/8/10/12/13/14 + variation selectors); **every GSUB and GPOS lookup type** with **GDEF + lookup flags** (mark filtering); **variable fonts** (`fvar`/`avar`/`gvar` + IUP, plus `HVAR`/`VVAR`/`MVAR` metric variation); the full **TrueType instruction hinter** and a **CFF/Type 2 stem grid-fitter** (blue zones, counter control, stem darkening); vertical metrics; and the **OpenType `MATH`** table. Feature parity with FreeType on the outline + hinting paths."
+  blurb = "The engine: a pure-Go, stdlib-only **sfnt** parser and anti-aliased rasteriser. **TrueType `glyf` + CFF + CFF2** outlines; **all cmap formats** (0/2/4/6/8/10/12/13/14 + variation selectors); **every GSUB and GPOS lookup type** with **GDEF + lookup flags** (mark filtering); **variable fonts** (`fvar`/`avar`/`gvar` + IUP, plus `HVAR`/`VVAR`/`MVAR` metric variation); the full **TrueType instruction hinter** and a **CFF/Type 2 stem grid-fitter** (blue zones, counter control, stem darkening); vertical metrics; the **OpenType `MATH`** table; and **font subsetting + instancing** (`SubsetTrueType`/`SubsetCFF`, `Instance`) plus OS/2 **font-descriptor** accessors for PDF/CSS embedding. Feature parity with FreeType on the outline + hinting paths."
 
 [[params.repos]]
   name = "bidi"
@@ -31,4 +31,4 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
   pkg = "github.com/go-opentype/fonts"
   url = "https://github.com/go-opentype/fonts"
   status = "ready"
-  blurb = "**44 legible, permissively-licensed families** — **Atkinson Hyperlegible**, Inter, Lora, JetBrains Mono, the Go pair, dozens of Noto faces, and non-Latin scripts (**Arabic, Hebrew, Devanagari, Thai, Egyptian Hieroglyphs**, plus **CJK** via Noto Sans SC) — each its own subpackage embedded via `go:embed`, so a binary links only the faces it imports. `fonts.MostLegible()` returns Atkinson Hyperlegible, designed by the Braille Institute to maximise character distinction for low-vision readers."
+  blurb = "**46 legible, permissively-licensed families** — **Atkinson Hyperlegible**, Inter, Lora, JetBrains Mono, the Go pair, dozens of Noto faces, and non-Latin scripts (**Arabic, Hebrew, Devanagari, Thai, Egyptian Hieroglyphs**, plus **CJK** via Noto Sans SC, JP and KR) — each its own subpackage embedded via `go:embed`, so a binary links only the faces it imports. `fonts.MostLegible()` returns Atkinson Hyperlegible, designed by the Braille Institute to maximise character distinction for low-vision readers."
