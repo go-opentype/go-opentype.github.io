@@ -14,10 +14,11 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
 
 [[params.repos]]
   name = "bidi"
-  pkg = "github.com/go-opentype/bidi"
-  url = "https://github.com/go-opentype/bidi"
+  org = "go-typeset"
+  pkg = "github.com/go-typeset/bidi"
+  url = "https://github.com/go-typeset/bidi"
   status = "ready"
-  blurb = "A pure-Go, stdlib-only implementation of the **Unicode Bidirectional Algorithm (UAX #9)** for mixed left-to-right / right-to-left text. `Bidi_Class` and paired-bracket properties are compiled into generated lookup tables — no `golang.org/x/text` dependency. `ResolveLevels`, `Reorder` and a `VisualOrder` convenience wrapper."
+  blurb = "A pure-Go, stdlib-only implementation of the **Unicode Bidirectional Algorithm (UAX #9)** for mixed left-to-right / right-to-left text. `Bidi_Class` and paired-bracket properties are compiled into generated lookup tables — no `golang.org/x/text` dependency. `ResolveLevels`, `Reorder` and a `VisualOrder` convenience wrapper. **It now lives in [go-typeset](https://github.com/go-typeset/bidi)**: the transfer left a redirect, so the old link still opens, but `go get github.com/go-opentype/bidi` fails — the module declares the new path and Go refuses the mismatch."
 
 [[params.repos]]
   name = "shape"
