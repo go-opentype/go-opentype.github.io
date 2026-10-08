@@ -55,6 +55,7 @@
     display: inline-block; padding: 10px 18px; margin: 4px; border-radius: 8px; text-decoration: none;
     font-weight: 600; border: 1px solid var(--border);
   }
+  .btn .icon{display:inline-block;vertical-align:-0.15em;margin-right:.45em}
   .btn.primary { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: var(--accent-fg); border-color: var(--accent); }
   .btn.ghost { color: var(--fg); background: transparent; }
   .lead { color: var(--fg); max-width: 760px; margin: 8px auto 0; text-align: center; }
@@ -98,9 +99,9 @@
       <span class="pill">BSD-3-Clause</span>
     </div>
     <div class="cta">
-      <a class="btn primary" href="https://github.com/go-opentype/opentype">opentype repo</a>
-      <a class="btn ghost" href="https://go-opentype.github.io/docs/">docs</a>
-      <a class="btn ghost" href="https://github.com/go-opentype">org</a>
+      <a class="btn primary" href="https://github.com/go-opentype/opentype">{{ partial "icons/mark-github.html" . }}opentype repo</a>
+      <a class="btn ghost" href="https://go-opentype.github.io/docs/">{{ partial "icons/book.html" . }}docs</a>
+      <a class="btn ghost" href="https://github.com/go-opentype">{{ partial "icons/organization.html" . }}org</a>
     </div>
     <div class="badges">
       <a href="https://pkg.go.dev/github.com/go-opentype/opentype"><img alt="pkg.go.dev" src="https://img.shields.io/badge/pkg.go.dev-opentype-007d9c?logo=go&amp;logoColor=white"></a>
