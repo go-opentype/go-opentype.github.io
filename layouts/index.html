@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{/* Dark Reader repaints pages that already draw their own dark theme, as this one does: ask it to stand aside. */}}
+<meta name="darkreader-lock">
 <title>{{ .Site.Title }} — pure-Go, zero-dependency TrueType/OpenType text stack</title>
 <meta name="description" content="go-opentype — a pure-Go, zero-dependency TrueType/OpenType text stack: font parsing + rasterisation, Unicode bidi, complex-text shaping, and bundled legible fonts. No x/image, no x/text, no cgo.">
 <style>
