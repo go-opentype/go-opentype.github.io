@@ -63,4 +63,19 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
 # The strip under the top bar: the code's licence and cgo, and the data
 # shipped under its own licence (read from its licence files).
 [params.mantra]
+  goarch = ["amd64", "arm64", "riscv64", "loong64", "ppc64le", "s390x", "arm"]
   items = ["LICENSE=BSD-3-Clause", "CGO_ENABLED=0", "fonts: OFL-1.1, Bitstream-Vera, Arev"]
+
+# The hero's buttons, rendered by landingkit's cta.html in the kit's order.
+[[params.cta]]
+  kind  = "docs"
+  href  = "https://github.com/go-opentype/opentype"
+  label = "opentype repo"
+[[params.cta]]
+  kind  = "link"
+  href  = "https://go-opentype.github.io/docs/"
+  label = "docs"
+[[params.cta]]
+  kind  = "github"
+  href  = "https://github.com/go-opentype"
+  label = "org"

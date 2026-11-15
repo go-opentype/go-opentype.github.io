@@ -45,17 +45,14 @@
   <div class="hero"><div class="wrap">
     <div>
       <h1 class="head">go-opentype</h1>
-      <p class="sub">Pure-Go, zero-dependency TrueType/OpenType text stack.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/go-opentype/opentype">{{ partial "icons/github.html" . }}opentype repo</a>
-        <a class="btn btn-ghost" href="https://go-opentype.github.io/docs/">{{ partial "icons/book.html" . }}docs</a>
-        <a class="btn btn-ghost" href="https://github.com/go-opentype">{{ partial "icons/organization.html" . }}org</a>
-      </div>
-      <div class="trust">{{ if not (partial "mantra-on.html" $) }}<span class="pill">pure Go · CGO=0</span>{{ end }}<span class="pill">stdlib only</span><span class="pill">100% statement coverage</span><span class="pill">runs in js/wasm</span><span class="pill">runs on native</span>{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}</div>
+      <p class="sub">{{ if partial "mantra-on.html" . }}Go{{ else }}Pure-Go{{ end }}, zero-dependency TrueType/OpenType text stack.</p>
+      {{/* [[params.cta]] in hugo.toml: the kit renders the row */}}
+      {{ partial "cta.html" . }}
+      <div class="trust">{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">pure Go · CGO=0</span>{{ end }}{{ end }}<span class="pill">stdlib only</span><span class="pill">100% statement coverage</span><span class="pill">runs in js/wasm</span><span class="pill">runs on native</span>{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}{{ end }}</div>
       <div class="legacy"><div class="badges">
       <a href="https://pkg.go.dev/github.com/go-opentype/opentype"><img alt="pkg.go.dev" src="https://img.shields.io/badge/pkg.go.dev-opentype-007d9c?logo=go&amp;logoColor=white"></a>
       <img alt="Go" src="https://img.shields.io/badge/Go-1.26.4%2B-00ADD8?logo=go&amp;logoColor=white">
-      {{ if not (partial "mantra-on.html" $) }}<img alt="License" src="https://img.shields.io/badge/license-BSD--3--Clause-blue">{{ end }}
+      {{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<img alt="License" src="https://img.shields.io/badge/license-BSD--3--Clause-blue">{{ end }}{{ end }}
     </div></div>
     </div>
     {{ partial "hero-carousel.html" . }}
